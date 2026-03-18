@@ -5,7 +5,7 @@ import com.qualcomm.robotcore.hardware.Gamepad;
 import java.util.Arrays;
 
 
-public class TBDGamepad
+public class  TBDGamepad
 {
     public Gamepad gamepad;
 
