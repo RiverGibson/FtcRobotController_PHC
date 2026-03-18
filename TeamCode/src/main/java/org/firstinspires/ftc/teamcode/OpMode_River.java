@@ -7,15 +7,19 @@ import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 public class OpMode_River extends OpMode {
 
     LilBlueBot_PHC blueBot = new LilBlueBot_PHC();
+    TBDGamepad gamepad;
 
     @Override
     public void init() {
         blueBot.init(hardwareMap);
+        gamepad  = new TBDGamepad(gamepad1);
     }
 
     @Override
     public void loop() {
-        blueBot.leftMotor.setPower(0.5);
-        blueBot.leftMotor.setPower(0.5);
+        gamepad.update();
+
+        blueBot.leftMotor.setPower(gamepad.getLeftY());
+        blueBot.leftMotor.setPower(gamepad.getLeftY());
     }
 }
